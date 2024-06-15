@@ -1,0 +1,37 @@
+﻿@page
+@model Eshop.RazorPage.Pages.Auth.LoginModel
+ @{
+     ViewData["Title"] = "ورود در سایت";
+    Layout = "Shared/Layouts/_AuthLayout";
+}
+
+
+<div class="auth-form shadow-around">
+    <div class="site-logo">
+        <a href="/">
+            <img src="/assets/images/logo.png" alt="logo">
+        </a>
+    </div>
+    <div class="auth-form-title">
+        @ViewData["Title"]
+    </div>
+    <form method="post">
+       
+           @Html.EditorFor(m=>m.PhoneNumber)
+      
+           @Html.EditorFor(m=>m.PassWord)
+      
+        
+        <div class="form-element-row text-left">
+            <button class="btn-element btn-success-element">
+                <i class="fad fa-user-edit"></i>
+                ورود 
+            </button>
+        </div>
+
+    </form>
+    <div class="auth-form-footer">
+        <span > کاربر جدید هستید؟ </span>
+        <a asp-page="Register" class="link--with-border-bottom">ثبت نام کنید</a>
+    </div>
+</div>

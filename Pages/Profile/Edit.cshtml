@@ -1,0 +1,52 @@
+﻿@page
+@model Eshop.RazorPage.Pages.Profile.EditModel
+@{
+
+    ViewData["Title"] = "ویرایش اطلاعات";
+}
+<div class="row mb-5">
+
+    <partial name="Shared/Profile/_PartialSideBar" />
+    <div class="col-lg-9 col-md-8">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="section-title mb-2">
+                    @ViewData["Title"]
+                </div>
+                <section class="shadow-around p-3">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-lg-6 mb-5">
+                                @Html.EditorFor(m=>m.Name)
+                            </div>
+                            <div class="col-lg-6 mb-5">
+                                @Html.EditorFor(m=>m.Family)
+                            </div>
+                            <div class="col-lg-6 mb-5">
+                                @Html.EditorFor(m=>m.PhoneNumber)
+                            </div>
+                            <div class="col-lg-6 mb-5">
+                                @Html.EditorFor(m=>m.Email)
+                            </div>
+                            <div class="col-lg-6 mb-5">
+                                @Html.EditorFor(m=>m.Gender)
+                            </div>
+                            <div class="col-lg-6 mb-5">
+                                @Html.EditorFor(m=>m.Avatar)
+                            </div>
+                            <div class="col-12">
+                                <div class="form-element-row text-left">
+                                    <button type="submit" class="btn-element btn-success-element">
+                                        <i class="fad fa-user-edit"></i>
+                                        ذخیره تغییرات
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
